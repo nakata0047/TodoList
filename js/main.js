@@ -2,6 +2,7 @@
 
 const textInput = document.getElementById('text-input');
 const todoList = document.getElementById('todo-list');
+var i = 0;
 
 textInput.addEventListener('keydown', e => {
     const text = textInput.value;
@@ -18,12 +19,13 @@ textInput.addEventListener('keydown', e => {
     li.classList.add('list-item');
     span.textContent = text;
     span.classList.add('todo-text');
-    span.id = "todo";
+    
 
     complete_button.textContent = '完了';
     complete_button.type = 'button';
     complete_button.classList.add('complete-button');
     complete_button.addEventListener('click', e => {
+        const todo = e.target.previousElementSibling;
         if (todo.style.textDecoration == "line-through") {
             todo.style.textDecoration = "none";
         } else {

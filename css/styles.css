@@ -76,6 +76,7 @@ header{
 
 .todo-text{
     word-break: break-all;
+    text-decoration: none;
 }
 
 .list-item{
